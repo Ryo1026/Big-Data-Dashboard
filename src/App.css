@@ -66,3 +66,13 @@
   transform: translateX(148px) translateY(48px) rotate(90deg);
   transform-origin: top left;
 }
+
+.content{
+  width: 100%;
+  padding-left: 150px;
+  padding-top: 8px;
+}
+
+.inner-content{
+  margin: 0 auto;
+}
