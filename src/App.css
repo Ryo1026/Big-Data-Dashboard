@@ -2,7 +2,7 @@
   margin: 0;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -47,7 +47,7 @@ a{
   display: flex;
 }
 
-.taiwan {
+.decoration {
   position: absolute;
   top: 8px;
   left: 0;
@@ -74,14 +74,14 @@ a{
 .content {
   display: flex;
   width: 100%;
-  padding-left: 150px;
-  padding-top: 8px;
+  margin-left: 150px;
+  padding: 8px 143.5px 0;
 }
 
 .inner-content {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .h2-title {
@@ -97,7 +97,7 @@ a{
   padding-bottom: 42px;
 }
 
-.divider{
+.divider {
   display: flex;
   align-items: center;
   width: 100%;
@@ -105,27 +105,33 @@ a{
   white-space: nowrap;
 }
 
-hr{
+hr {
   width: 100%;
+  border: 0;
+  border-bottom: 1px solid #b388ff;
 }
 
-.result-text{
+.result-text {
   width: fit-content;
   margin: 0 10px;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 16px;
   box-sizing: border-box;
   padding: 8px 13px;
-  border: 1px solid #B388FF;
+  border: 1px solid #b388ff;
   border-radius: 16px;
-  color: #B388FF;
+  color: #b388ff;
 }
 
-.search-result{
-  font-family: 'Noto Sans TC';
+.myCharts {
+  position: relative;
+}
+
+.search-result {
+  font-family: "Noto Sans TC";
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -134,4 +140,62 @@ hr{
   text-align: center;
   box-sizing: border-box;
   padding: 42px 0 48px;
+}
+
+.chart-container {
+  margin-bottom: 40px;
+}
+
+.no-data {
+  text-align: center;
+}
+
+.loader {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  border: 5px solid rgb(101, 31, 255);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .content {
+    padding: 8px 8px 0;
+    margin: 0;
+  }
+
+  .decoration {
+    background: linear-gradient(
+      90.07deg,
+      rgba(230, 0, 0, 0.12) 0.07%,
+      rgba(255, 204, 0, 0.12) 30.94%,
+      rgba(0, 127, 0, 0.12) 65.61%,
+      rgba(0, 0, 204, 0.12) 99.94%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transform: translateX(148px) translateY(48px) rotate(90deg);
+    transform-origin: top left;
+  }
+
+  .form {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
